@@ -3,12 +3,12 @@ import Archivo as ar
 class Bitacora:
     
     def escribeFecha():
-        ar.Archivo.lectura()
         archivo = open("Bitacora.txt",'a')
         archivo.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\r")
         archivo.close
 
     def poneid():
+        ar.Archivo.lectura()
         archivo = open("Bitacora.txt",'a')
         archivo.write("1"+"\r")    
         archivo.close  
@@ -33,9 +33,10 @@ class Bitacora:
         archivo.write(f"Archivos movidos: {ar.extension_movimiento}"+"\r")
         archivo.close
 
-Bitacora.poneid()  
+#para hacer pruebas
+'''Bitacora.poneid()  
 Bitacora.escribeFecha()
 Bitacora.capturaOrigen()
 Bitacora.capturaDestino()
 Bitacora.capturaArchivosco()
-Bitacora.capturaArchivosmo()
+Bitacora.capturaArchivosmo()'''
