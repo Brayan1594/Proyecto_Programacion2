@@ -8,15 +8,15 @@ class movimientoArchivos:
 
     def moverArchivosfiltro():
         
-        lista_archivos = os.listdir(ar.origen)
+        lista_archivos = os.listdir(ar.origin)
         for linea in lista_archivos:
-            if linea.endswith(f".{ar.extension_movimiento}"):
-                shutil.move(f"{ar.origen}/{linea}",ar.destino)
+            if linea.endswith(f".{ar.moveFiles}"):
+                shutil.move(f"{ar.origin}/{linea}",ar.destiny)
 
     def moverTodosarchivos():
-        lista_archivos = os.listdir(ar.origen)
+        lista_archivos = os.listdir(ar.origin)
         for linea in lista_archivos:
-             shutil.move(f"{ar.origen}/{linea}",ar.destino)
+             shutil.move(f"{ar.origin}/{linea}",ar.destino)
 
     #mueve los archivos con el filtro
     def controltimovifil():

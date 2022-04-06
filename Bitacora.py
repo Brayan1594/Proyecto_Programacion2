@@ -8,29 +8,29 @@ class Bitacora:
         archivo.close
 
     def poneid():
-        ar.Archivo.lectura()
+        ar.readFile()
         archivo = open("Bitacora.txt",'a')
         archivo.write("1"+"\r")    
         archivo.close  
 
     def capturaOrigen():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Origen: {ar.origen}"+"\r")
+        archivo.write(f"Origen: {ar.origin}"+"\r")
         archivo.close
 
     def capturaDestino():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Destino: {ar.destino}"+"\r")
+        archivo.write(f"Destino: {ar.destiny}"+"\r")
         archivo.close
 
     def capturaArchivosco():
          archivo = open("Bitacora.txt",'a')
-         archivo.write(f"Archivos copiados : {ar.extension_copia}"+"\r")
+         archivo.write(f"Archivos copiados : {ar.copyFiles}"+"\r")
          archivo.close
 
     def capturaArchivosmo():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Archivos movidos: {ar.extension_movimiento}"+"\r")
+        archivo.write(f"Archivos movidos: {ar.moveFiles}"+"\r")
         archivo.close
 
 #para hacer pruebas
