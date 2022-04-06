@@ -1,5 +1,5 @@
 from datetime import datetime
-import Archivo as ar
+import File as fl
 class Bitacora:
     
     def escribeFecha():
@@ -8,29 +8,29 @@ class Bitacora:
         archivo.close
 
     def poneid():
-        ar.readFile()
+        fl.readFile()
         archivo = open("Bitacora.txt",'a')
         archivo.write("1"+"\r")    
         archivo.close  
 
     def capturaOrigen():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Origen: {ar.origin}"+"\r")
+        archivo.write(f"Origen: {fl.origin}"+"\r")
         archivo.close
 
     def capturaDestino():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Destino: {ar.destiny}"+"\r")
+        archivo.write(f"Destino: {fl.destiny}"+"\r")
         archivo.close
 
     def capturaArchivosco():
          archivo = open("Bitacora.txt",'a')
-         archivo.write(f"Archivos copiados : {ar.copyFiles}"+"\r")
+         archivo.write(f"Archivos copiados : {fl.copyFiles}"+"\r")
          archivo.close
 
     def capturaArchivosmo():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Archivos movidos: {ar.moveFiles}"+"\r")
+        archivo.write(f"Archivos movidos: {fl.moveFiles}"+"\r")
         archivo.close
 
 #para hacer pruebas
