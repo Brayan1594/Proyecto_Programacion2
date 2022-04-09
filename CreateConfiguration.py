@@ -20,7 +20,7 @@ class createFileConfiguration:
 
 # Lee el archivo de configuración
     def readFile1():
-        print("\n-----NUEVA CONFIGURACION DEL PROGRAMA-----\n")
+        print("\033[3;32m"+"\n-----NUEVA CONFIGURACION DEL PROGRAMA-----\n"+"\033[0m")
         file = open("Pruebas.txt","r")
         list = file.readlines()
         for x in list:
