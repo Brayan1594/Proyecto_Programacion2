@@ -9,7 +9,7 @@ class Bitacora:
         #archivo.close
 
     def poneid():
-        fl.readFile()
+        fl.readFile() # Este método ya no existe
         archivo = open("Bitacora.txt",'a')
         archivo.write("1"+"\r")    
         archivo.close  

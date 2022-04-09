@@ -10,11 +10,11 @@ def startSalute():
 # Crea el menú de saludo
     try:
         while(True):
-            print("Opción 1-------CONTINUAR ")
-            print("Opción 2-------SALIR"+"\n")
-            Continuar = input("Por favor digite alguna de las opciones: "+"\n")
+            print("\033[;34m"+"Opción 1-------CONTINUAR ")
+            print("Opción 2-------SALIR\n"+"\033[0m")
+            Continuar = input("Por favor digite alguna de las opciones: ")
             if (not(Continuar.isnumeric())): 
-                print("La opción proporcionada es incorrecta, por favor digite uno de los números del menú: "+"\n") 
+                print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción proporcionada es incorrecta, por favor digite uno de los números del menú: "+"\n") 
                 continue
             x = int(Continuar)
             if x == 1:
@@ -23,6 +23,6 @@ def startSalute():
             elif x == 2:
                 exit()
             else:
-                print("La opción digitada no es válida, por favor digite una opción presente en el menú: "+"\n")
+                print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción digitada no es válida, por favor digite una opción presente en el menú: "+"\n")
     except BaseException():
         print("--------------ERROR DEL SISTEMA---------------")

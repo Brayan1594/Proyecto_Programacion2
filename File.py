@@ -2,6 +2,7 @@
 import os
 
 # Lee el archivo configuración y captura las variables principales
+
 File = open("ConfiguracionProyecto.txt","r")
 List = File.readlines()
 for x in List:

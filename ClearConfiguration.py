@@ -41,14 +41,14 @@ class clearBaths:
         clearBaths.backupConfig()
         try:
             os.remove("Pruebas.txt")
-            print("\033[3;32m"+"\n----------LIMPIEZA DE BATCHS EXITOSA----------\n"+"\033[0m")
+            print("\033[4;32m"+"\n----------LIMPIEZA DE BATCHS EXITOSA----------\n"+"\033[0m")
             print("Por favor elija una opción para continuar\n")
             print("1. Restablecer una configuración----")
             print("2. Volver a menú inicial------------")
             while(True):
                 option = input()
                 if (not(option.isnumeric())): 
-                    print("La opción proporcionada es incorrecta por favor digite uno de los números del menú") 
+                    print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción proporcionada es incorrecta por favor digite uno de los números del menú") 
                     continue
                 x = int(option)
                 if x == 1: 

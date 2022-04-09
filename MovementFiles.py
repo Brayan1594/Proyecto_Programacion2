@@ -3,6 +3,7 @@ import shutil
 import os
 import threading
 import File as fl   
+import menu
 
 # Clase de movimiento de archivos
 class fileMovement:
@@ -31,12 +32,14 @@ class fileMovement:
         seconds = int(input())
         time1 = threading.Timer(seconds, fileMovement.runMoveFilter)
         time1.start()
+        menu.showMenu()
 
 # Asigna el tiempo de ejecución del método "movementTime1"
     def runMoveFilter():
          fileMovement.moveFilter()
-         print("\nMOVIMIENTOS REALIZADOS CON EXITO")
-
+         print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         print("\nPor favor digite la opción que desea realizar: \n")
+         menu.startMenu()   
 
 # Asigna el tiempo del movimiento del método moveAll
     def movementTime2():
@@ -44,11 +47,12 @@ class fileMovement:
         seconds = int(input())
         time2 = threading.Timer(seconds, fileMovement.runMoveAll)
         time2.start()
-
+        
 # Asigna el tiempo de ejecución del método "movementTime2"
     def runMoveAll():
          fileMovement.moveAll()
-         print("\nMOVIMIENTOS REALIZADOS CON EXITO")
-
+         print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         print("\nPor favor digite la opción que desea realizar: \n")
+         menu.startMenu()
 #fileMovement.movementTime1()
 #fileMovement.movementTime2()
