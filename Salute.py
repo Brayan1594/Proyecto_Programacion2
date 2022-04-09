@@ -14,7 +14,6 @@ def startSalute():
                 continue
             x = int(Continuar)
             if x == 1:
-                menu.showMenu()
                 menu.startMenu()
                 break
             elif x == 2:

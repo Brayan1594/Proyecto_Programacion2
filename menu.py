@@ -1,3 +1,6 @@
+import ClearConfiguration as CL
+
+
 def showMenu():
     print("------------------------------MENU PRINCIPAL------------------------------"+"\n\n\n")
     print("-----------------OPCION 1:   MOVER ARCHIVOS.--------------------------")
@@ -8,6 +11,7 @@ def showMenu():
 
 #Creamos el menú principal
 def startMenu():
+    showMenu()
     try:
         while(True):
             optionMenu = input("Por favor digite la opción que desea realizar: ")
@@ -18,7 +22,7 @@ def startMenu():
             if x == 1: 
                print("1")
             elif x == 2:
-               print("2")
+               CL.clearBaths.clearConfig()
             elif x == 3:
                 print("3")
             elif x == 4:

@@ -1,1 +1,3 @@
+import Salute
 
+Salute.startSalute()

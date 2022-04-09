@@ -5,7 +5,7 @@ class Bitacora:
     def escribeFecha():
         archivo = open("Bitacora.txt",'a')
         archivo.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\r")
-        archivo.close
+        #archivo.close
 
     def poneid():
         fl.readFile()

@@ -4,7 +4,7 @@ import os
 print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
 
 # A partir de acá se lee el archivo configuración y se capturan las instrucciones principales
-File = open(r"C:\Users\LUIS\Documents\Prueba Python\Proyecto_Programacion2\Origen\ConfiguracionProyecto.txt","r")
+File = open("ConfiguracionProyecto.txt","r")
 List = File.readlines()
 for x in List:
     if (x.split("=")[0].strip() == "Origin"):

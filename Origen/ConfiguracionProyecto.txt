@@ -1,4 +1,0 @@
-Origin=C:\Users\LUIS\Documents\Prueba Python\Proyecto_Programacion2\Origen
-Destiny=C:\Users\LUIS\Documents\Prueba Python\Proyecto_Programacion2\Destino
-CopyFiles=txt,docx
-MoveFiles=xlsx,pptx
