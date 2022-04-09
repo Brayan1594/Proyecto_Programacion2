@@ -1,6 +1,7 @@
+# Importe de las clases necesarias
 import ClearConfiguration as CL
 
-
+# Muestra el menú
 def showMenu():
     print("------------------------------MENU PRINCIPAL------------------------------"+"\n\n\n")
     print("-----------------OPCION 1:   MOVER ARCHIVOS.--------------------------")
@@ -9,7 +10,7 @@ def showMenu():
     print("-----------------OPCION 4:   SALIR DEL PROGRAMA.-----------------------------"+"\n\n")
     print("--------------------------------------------------------------------------")
 
-#Creamos el menú principal
+#Crea el menú principal
 def startMenu():
     showMenu()
     try:
@@ -20,6 +21,7 @@ def startMenu():
                 continue
             x = int(optionMenu)
             if x == 1: 
+               print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n") 
                print("1")
             elif x == 2:
                CL.clearBaths.clearConfig()

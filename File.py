@@ -1,9 +1,7 @@
-# Importación de las clases necesarias
+# Importe de las clases necesarias
 import os
 
-print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
-
-# A partir de acá se lee el archivo configuración y se capturan las instrucciones principales
+# Lee el archivo configuración y captura las variables principales
 File = open("ConfiguracionProyecto.txt","r")
 List = File.readlines()
 for x in List:
@@ -16,14 +14,14 @@ for x in List:
     elif(x.split("=")[0].strip() == "MoveFiles"):
         moveFiles = x.split("=")[1].strip()          
     File.close()
-# Método para mostrar los archivos de la carpeta origen    
+# Muestra los archivos de la carpeta origen    
 def showOrigin():
     print("Los datos en el archivo de configuración son")
     existingFiles = os.listdir(origin)
     for line in existingFiles:
         print(line)
 
-# Método para mostrar los archivos de la carpeta destino    
+# Muestra los archivos de la carpeta destino    
 def showDestiny():
     print("Los datos en el archivo de configuración son")
     existingFiles = os.listdir(destiny)

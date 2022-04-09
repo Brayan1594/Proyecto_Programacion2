@@ -1,9 +1,13 @@
+# Importe de las clases necesarias
 import menu
+
+# Presentación del aplicativo
 def startSalute():
     print("\n\n"+"      -------------------------------------BIENVENIDO A LA APP PROYECTO FINAL-------------------------------------"+"\n\n")
     print("---Desarrolladores---"+"\n")
     print("Cristel González Zapata"+"\n"+"Brayan Alvarez Araya"+"\n"+"Luis Salazar Benavides"+"\n"+"Rafael Rivera Vargas"+"\n\n\n") 
-#Creamos el munú de saludo
+
+# Crea el menú de saludo
     try:
         while(True):
             print("Opción 1-------CONTINUAR ")

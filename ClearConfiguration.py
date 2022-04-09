@@ -1,3 +1,4 @@
+# Importe de las clases necesarias
 import os
 from this import d
 from tkinter import Menu
@@ -8,7 +9,10 @@ import menu
 import time
 import CreateConfiguration as CC
 
+# Clase para limpieza de batchs
 class clearBaths:
+
+# Registra el borrado en la bitácora
     def backupConfig():
         try:
             File = open("ConfiguracionProyecto.txt","r")
@@ -24,6 +28,7 @@ class clearBaths:
         except BaseException():
             print("----------ERROR DEL SISTEMA----------")
 
+# Restaura la configuración del aplicativo
     def restoreConfig():
         try:
             CC.createFileConfiguration.createFile()
@@ -31,6 +36,7 @@ class clearBaths:
         except BaseException():
             print("----------ERROR DEL SISTEMA----------")
 
+# Realiza el borrado de batchs
     def clearConfig():
         clearBaths.backupConfig()
         try:

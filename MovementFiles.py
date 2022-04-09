@@ -1,9 +1,13 @@
+# Importe de las clases necesarias
 import shutil
 import os
 import threading
 import File as fl   
 
+# Clase de movimiento de archivos
 class fileMovement:
+
+# Mueve archivos según filtro
     def moveFilter():
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)
@@ -12,7 +16,8 @@ class fileMovement:
                 if line.endswith(f".{x}"):
                     shutil.move(f"{fl.origin}/{line}",fl.destiny)
                     print(line)
-                
+
+# Mueve todos los archivos de la ruta dada        
     def moveAll():
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)
@@ -20,7 +25,7 @@ class fileMovement:
             shutil.move(f"{fl.origin}/{line}",fl.destiny)
             print(line)
     
-# Mover los archivos con el filtro
+# Asigna el tiempo del movimiento del método moveFilter
     def movementTime1():
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())
@@ -33,7 +38,7 @@ class fileMovement:
          print("\nMOVIMIENTOS REALIZADOS CON EXITO")
 
 
-# Mover todos los archivos
+# Asigna el tiempo del movimiento del método moveAll
     def movementTime2():
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())

@@ -1,3 +1,4 @@
+# Importe de las clases necesarias
 from datetime import datetime
 import File as fl
 class Bitacora:
