@@ -1,5 +1,6 @@
 # Importe de las clases necesarias
 import menu
+import time
 
 # Presentación del aplicativo
 def startSalute():
@@ -12,7 +13,7 @@ def startSalute():
         while(True):
             print("\033[;34m"+"Opción 1-------CONTINUAR ")
             print("Opción 2-------SALIR\n"+"\033[0m")
-            Continuar = input("Por favor digite alguna de las opciones: ")
+            Continuar = input("Por favor digite alguna de las opciones: \n")
             if (not(Continuar.isnumeric())): 
                 print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción proporcionada es incorrecta, por favor digite uno de los números del menú: "+"\n") 
                 continue
@@ -21,6 +22,8 @@ def startSalute():
                 menu.startMenu()
                 break
             elif x == 2:
+                print("\033[4;33m"+"GRACIAS POR UTILIZAR LA APP"+"\033[0m")
+                time.sleep(2)
                 exit()
             else:
                 print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción digitada no es válida, por favor digite una opción presente en el menú: "+"\n")

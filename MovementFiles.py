@@ -4,6 +4,7 @@ import os
 import threading
 import File as fl   
 import menu
+import time
 
 # Clase de movimiento de archivos
 class fileMovement:
@@ -38,6 +39,7 @@ class fileMovement:
     def runMoveFilter():
          fileMovement.moveFilter()
          print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
          menu.startMenu()   
 
@@ -52,7 +54,6 @@ class fileMovement:
     def runMoveAll():
          fileMovement.moveAll()
          print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
          menu.startMenu()
-#fileMovement.movementTime1()
-#fileMovement.movementTime2()

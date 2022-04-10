@@ -3,6 +3,8 @@ import shutil
 import os
 import File as fl
 import threading
+import menu
+import time
 
 # Clase para el copiado de archivos
 class CopyFiles:
@@ -27,6 +29,8 @@ class CopyFiles:
 # Ejecuta el método según el tiempo asignado
     def timeCopy():
         CopyFiles.iniCopyFiles()
-        print("\nCOPIADO DE ARCHIVOS EXITOSO")
-
+        print("\033[4;32m"+"\nCOPIADO DE ARCHIVOS EXITOSO"+"\033[0m")
+        time.sleep(2)
+        print("\nPor favor digite la opción que desea realizar: \n")
+        menu.startMenu()
 #CopyFiles.copyTime()
