@@ -1,17 +1,16 @@
 # Importe de las clases necesarias
 from datetime import datetime
 import File as fl
-class Bitacora:
+class logBook:
     
     def escribeFecha():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\r")
-        #archivo.close
+        archivo.write(f"fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"+"\r")
+        archivo.close
 
     def poneid():
-        fl.readFile() # Este método ya no existe
         archivo = open("Bitacora.txt",'a')
-        archivo.write("1"+"\r")    
+        archivo.write(f"ID: {1}"+"\r")    
         archivo.close  
 
     def capturaOrigen():
@@ -29,15 +28,20 @@ class Bitacora:
          archivo.write(f"Archivos copiados : {fl.copyFiles}"+"\r")
          archivo.close
 
-    def capturaArchivosmo():
+    def capturaArchivosmo(fileList):
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Archivos movidos: {fl.moveFiles}"+"\r")
+        archivo.write(f"Archivos movidos: {fileList}"+"\r")
+        archivo.write("--------------------------------------------------------------------"+"\r")
         archivo.close
 
-#para hacer pruebas
-'''Bitacora.poneid()  
-Bitacora.escribeFecha()
-Bitacora.capturaOrigen()
-Bitacora.capturaDestino()
-Bitacora.capturaArchivosco()
-Bitacora.capturaArchivosmo()'''
+    def TimeMovement(seconds):
+        archivo = open("Bitacora.txt",'a')
+        archivo.write(f"Tiempo Programado: {seconds} Segundos"+"\r")
+        archivo.close
+
+    def llenabita():
+        logBook.poneid()
+        logBook.escribeFecha()
+        logBook.capturaOrigen()
+        logBook.capturaDestino()
+        

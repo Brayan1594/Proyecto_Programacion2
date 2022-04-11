@@ -3,7 +3,7 @@ import os
 from this import d
 from tkinter import Menu
 import File as fl
-import Bitacora as bt
+import logBook as lb
 from datetime import datetime
 import menu
 import time
