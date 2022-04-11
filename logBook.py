@@ -23,21 +23,23 @@ class logBook:
         archivo.write(f"Destino: {fl.destiny}"+"\r")
         archivo.close
 
-    def capturaArchivosco():
+    def captureCopyfiles(filesListco):
          archivo = open("Bitacora.txt",'a')
-         archivo.write(f"Archivos copiados : {fl.copyFiles}"+"\r")
+         archivo.write(f"Archivos copiados : {filesListco}"+"\r")
+         archivo.write("-----------------------------------------------------------------------------"+"\r")
          archivo.close
 
-    def capturaArchivosmo(fileList):
+    def captureMovedfiles(fileListmo):
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Archivos movidos: {fileList}"+"\r")
-        archivo.write("--------------------------------------------------------------------"+"\r")
+        archivo.write(f"Archivos movidos: {fileListmo}"+"\r")
+        archivo.write("------------------------------------------------------------------------------"+"\r")
         archivo.close
 
-    def TimeMovement(seconds):
+    def progratime(seconds):
         archivo = open("Bitacora.txt",'a')
         archivo.write(f"Tiempo Programado: {seconds} Segundos"+"\r")
         archivo.close
+    
 
     def writeLogbook():
         logBook.putId()

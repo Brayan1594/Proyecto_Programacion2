@@ -29,7 +29,20 @@ def startMenu():
             if x == 1: 
                print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
                time.sleep(1) 
-               CF.CopyFiles.copyTime()
+               print("\nElija una opción para continuar con el copiado de archivos\n")
+               print("\033[;34m"+"1. COPIAR ARCHIVOS POR FILTRO DE CONFIGURACIÓN-----")
+               print("2. COPIAR TODOS LOS ARCHIVOS DEL ORIGEN--------\n"+"\033[0m")
+               optCop = input()
+               z = int(optCop)
+               if z == 1:
+                    CF.CopyFiles.copyTimefilter()
+                    print("Por favor espere")
+               elif z == 2:
+                    CF.CopyFiles.copyTimeall()
+                    print("Por favor espere")
+               else:
+                   print("\033[;31m"+"ERORR: "+"\033[0m"+"La opción digitada no existe")
+                   startMenu()
             elif x == 2:
                print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
                time.sleep(1)

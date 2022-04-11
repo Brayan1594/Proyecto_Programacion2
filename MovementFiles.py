@@ -7,40 +7,39 @@ import File as fl
 import menu
 import logBook as lb
 
-
 # Clase de movimiento de archivos
 class fileMovement:
 
 # Mueve archivos según filtro
     def moveFilter():
-        fileList = []
+        fileListmo = []
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)
         for x in fl.moveFiles.split(","):
             for line in file_list:
                 if line.endswith(f".{x}"):
-                    fileList.append(line)
+                    fileListmo.append(line)
                     shutil.move(f"{fl.origin}/{line}",fl.destiny)
                     print(line)
         lb.logBook.writeLogbook()
-        lb.logBook.capturaArchivosmo(fileList)
+        lb.logBook.captureMovedfiles(fileListmo)
 # Mueve todos los archivos de la ruta dada        
     def moveAll():
-        fileList = []
+        fileListmo = []
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)
         for line in file_list:
-            fileList.append(line)
+            fileListmo.append(line)
             shutil.move(f"{fl.origin}/{line}",fl.destiny)
             print(line)
         lb.logBook.writeLogbook()
-        lb.logBook.capturaArchivosmo(fileList)
+        lb.logBook.captureMovedfiles(fileListmo)
 # Asigna el tiempo del movimiento del método moveFilter
     def movementTime1():
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())
         time1 = threading.Timer(seconds, fileMovement.runMoveFilter)
-        lb.logBook.TimeMovement(seconds)
+        lb.logBook.progratime(seconds)
         time1.start()
         menu.showMenu()
 
@@ -50,13 +49,13 @@ class fileMovement:
          print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
          time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
-         menu.startMenu()   
+         menu.showMenu()   
 
 # Asigna el tiempo del movimiento del método moveAll
     def movementTime2():
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())
-        lb.logBook.TimeMovement(seconds)
+        lb.logBook.progratime(seconds)
         time2 = threading.Timer(seconds, fileMovement.runMoveAll)
         time2.start()
        
@@ -66,4 +65,4 @@ class fileMovement:
          print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
          time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
-         menu.startMenu()
+         menu.showMenu()
