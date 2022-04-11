@@ -22,7 +22,7 @@ class fileMovement:
                     fileList.append(line)
                     shutil.move(f"{fl.origin}/{line}",fl.destiny)
                     print(line)
-        lb.logBook.llenabita()
+        lb.logBook.writeLogbook()
         lb.logBook.capturaArchivosmo(fileList)
 # Mueve todos los archivos de la ruta dada        
     def moveAll():
@@ -33,7 +33,7 @@ class fileMovement:
             fileList.append(line)
             shutil.move(f"{fl.origin}/{line}",fl.destiny)
             print(line)
-        lb.logBook.llenabita()
+        lb.logBook.writeLogbook()
         lb.logBook.capturaArchivosmo(fileList)
 # Asigna el tiempo del movimiento del método moveFilter
     def movementTime1():
