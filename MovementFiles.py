@@ -48,7 +48,7 @@ class fileMovement:
 # Asigna el tiempo de ejecución del método "movementTime1"
     def runMoveFilter():
          fileMovement.moveFilter()
-         print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         print("\nMOVIMIENTOS REALIZADOS CON EXITO")
          time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
          menu.showMenu()   
@@ -64,7 +64,7 @@ class fileMovement:
 # Asigna el tiempo de ejecución del método "movementTime2"
     def runMoveAll():
          fileMovement.moveAll()
-         print("\033[4;32m"+"\nMOVIMIENTOS REALIZADOS CON EXITO"+"\033[0m")
+         print("\nMOVIMIENTOS REALIZADOS CON EXITO")
          time.sleep(2)
          print("\nPor favor digite la opción que desea realizar: \n")
          menu.showMenu()

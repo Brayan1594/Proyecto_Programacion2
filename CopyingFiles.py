@@ -51,7 +51,7 @@ class CopyFiles:
 # Ejecuta el método según el tiempo asignado al copiado por filtro
     def timeCopyfilter():
         CopyFiles.copyFilter()
-        print("\033[4;32m"+"\nCOPIADO DE ARCHIVOS EXITOSO"+"\033[0m")
+        print("\nCOPIADO DE ARCHIVOS EXITOSO")
         time.sleep(2)
         print("\nPor favor digite la opción que desea realizar: \n")
         menu.showMenu()
@@ -65,7 +65,7 @@ class CopyFiles:
 # # Ejecuta el método según el tiempo asignado al copiado de todos los archivos
     def timeCopyall():
         CopyFiles.copyAll()
-        print("\033[4;32m"+"\nCOPIADO DE ARCHIVOS EXITOSO"+"\033[0m")
+        print("\nCOPIADO DE ARCHIVOS EXITOSO")
         time.sleep(2)
         print("\nPor favor digite la opción que desea realizar: \n")
         menu.showMenu()
