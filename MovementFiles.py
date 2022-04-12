@@ -3,7 +3,7 @@ import shutil
 import os
 import threading
 import time
-import File as fl   
+import File as fl 
 import menu
 import logBook as lb
 
@@ -12,6 +12,7 @@ class fileMovement:
 
 # Mueve archivos según filtro
     def moveFilter():
+        fl.Archivo.lecturaArchivo()
         fileListmo = []
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)
@@ -25,6 +26,7 @@ class fileMovement:
         lb.logBook.captureMovedfiles(fileListmo)
 # Mueve todos los archivos de la ruta dada        
     def moveAll():
+        fl.Archivo.lecturaArchivo()
         fileListmo = []
         print("\nEsta es la lista de archivos movidos: ")
         file_list = os.listdir(fl.origin)

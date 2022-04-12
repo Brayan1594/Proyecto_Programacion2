@@ -14,6 +14,7 @@ class CopyFiles:
 
 #Realiza el copiado de archivos por filtro y muestra la lista de archivos copiados
     def copyFilter():
+        fl.Archivo.lecturaArchivo()
         fileListco = []
         print("\nEsta es la lista de archivos copiados: ")
         file_list = os.listdir(fl.origin)
@@ -28,6 +29,7 @@ class CopyFiles:
 
 #Realiza el copiado de todos los archivos
     def copyAll():
+        fl.Archivo.lecturaArchivo()
         fileListco = []
         print("\nEsta es la lista de archivos copiados: ")
         file_list = os.listdir(fl.origin)
