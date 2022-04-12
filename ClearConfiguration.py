@@ -41,7 +41,7 @@ class clearBaths:
         clearBaths.backupConfig()
         try:
             os.remove("Pruebas.txt")
-            print("\n----------LIMPIEZA DE BATCHS EXITOSA----------\n")
+            print("----------LIMPIEZA DE BATCHS EXITOSA----------\n")
             print("Por favor elija una opción para continuar\n")
             print("1. Restablecer una configuración----")
             print("2. Volver a menú inicial------------")
