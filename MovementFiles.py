@@ -41,6 +41,7 @@ class fileMovement:
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())
         time1 = threading.Timer(seconds, fileMovement.runMoveFilter)
+        lb.logBook.successMove()
         lb.logBook.progratime(seconds)
         time1.start()
         menu.showMenu()
@@ -57,6 +58,7 @@ class fileMovement:
     def movementTime2():
         print("Digite el tiempo para comenzar el movimiento de archivos: ")
         seconds = int(input())
+        lb.logBook.successMove()
         lb.logBook.progratime(seconds)
         time2 = threading.Timer(seconds, fileMovement.runMoveAll)
         time2.start()

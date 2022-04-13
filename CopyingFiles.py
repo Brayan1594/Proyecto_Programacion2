@@ -44,6 +44,7 @@ class CopyFiles:
     def copyTimefilter():
         print("\nDigite el tiempo para comenzar copiado de archivos")
         seconds = int(input())
+        lb.logBook.successCopy()
         lb.logBook.progratime(seconds) 
         time1 = threading.Timer(seconds, CopyFiles.timeCopyfilter)
         time1.start()
@@ -59,6 +60,7 @@ class CopyFiles:
     def copyTimeall():
         print("\nDigite el tiempo para comenzar copiado de archivos")
         seconds = int(input())
+        lb.logBook.successCopy()
         lb.logBook.progratime(seconds) 
         time1 = threading.Timer(seconds, CopyFiles.timeCopyall)
         time1.start()

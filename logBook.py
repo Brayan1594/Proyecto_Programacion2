@@ -39,8 +39,17 @@ class logBook:
         archivo = open("Bitacora.txt",'a')
         archivo.write(f"Tiempo Programado: {seconds} Segundos"+"\r")
         archivo.close
-    
 
+    def successMove():
+        archivo = open("Bitacora.txt",'a')
+        archivo.write("MOVIMIENTO REALIZADO CON EXITO"+"\r")
+        archivo.close
+    
+    def successCopy():
+        archivo = open("Bitacora.txt",'a')
+        archivo.write("COPIADO REALIZADO CON EXITO"+"\r")
+        archivo.close
+    
     def writeLogbook():
         logBook.putId()
         logBook.writeDate()
