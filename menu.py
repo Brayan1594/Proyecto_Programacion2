@@ -1,10 +1,11 @@
 # Importe de las clases necesarias
-from asyncio import sleep
-from tkinter import Y
+import time
+import os
 import ClearConfiguration as CL
 import MovementFiles as MF
 import CopyingFiles as CF
-import time
+import logBook as lb
+
 
 # Muestra el menú
 def showMenu():
@@ -63,7 +64,10 @@ def startMenu():
             elif x == 3:
                 CL.clearBaths.clearConfig()
             elif x == 4:
-                exit()
+                if os.path.exists('Bitacora.txt'):
+                     lb.logBook.logReading()
+                else:
+                     print("LA BITACORA SE ENCUENTRA VACIA")
             elif x == 5:
                 print("GRACIAS POR UTILIZAR LA APP")
                 time.sleep(2)
