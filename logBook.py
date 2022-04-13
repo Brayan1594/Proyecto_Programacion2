@@ -2,6 +2,7 @@
 from datetime import datetime
 from random import randrange
 import File as fl
+#Esta es la clase Bitacora
 class logBook:
 #Escribe la hora y fecha actual a la bitacora
     def writeDate():
