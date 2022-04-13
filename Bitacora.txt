@@ -1,0 +1,21 @@
+----------LIMPIEZA DE CONFIGURACION----------
+Fecha y hora del movimiento:   2022-04-13 16:59:56
+Información borrada
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=txt,docx
+MoveFiles=xlsx,pptx
+----------LIMPIEZA DE CONFIGURACION----------
+Fecha y hora del movimiento:   2022-04-13 17:00:57
+Información borrada
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=txt,docx
+MoveFiles=xlsx,pptx
+----------LIMPIEZA DE CONFIGURACION----------
+Fecha y hora del movimiento:   2022-04-13 17:07:25
+Información borrada
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=txt,docx
+MoveFiles=xlsx,pptx

@@ -34,27 +34,32 @@ class clearBaths:
 
 # Realiza el borrado de batchs
     def clearConfig():
+        File = ("Pruebas.txt")
         clearBaths.backupConfig()
         try:
-            os.remove("Pruebas.txt")
-            print("----------LIMPIEZA DE BATCHS EXITOSA----------\n")
-            print("Por favor elija una opción para continuar\n")
-            print("1. Restablecer una configuración----")
-            print("2. Volver a menú inicial------------")
-            while(True):
-                option = input()
-                if (not(option.isnumeric())): 
-                    print("ERORR: La opción proporcionada es incorrecta por favor digite uno de los números del menú") 
-                    continue
-                x = int(option)
-                if x == 1: 
-                    clearBaths.restoreConfig()
-                    time.sleep(2)
-                    menu.startMenu()
-                elif x == 2:
-                    print("Volviendo al menú principal")
-                    time.sleep(2)
-                    menu.startMenu()
+            if File == True:
+                os.remove("Pruebas.txt")
+                print("----------LIMPIEZA DE BATCHS EXITOSA----------\n")
+                print("Por favor elija una opción para continuar\n")
+                print("1. Restablecer una configuración----")
+                print("2. Volver a menú inicial------------")
+                while(True):
+                    option = input()
+                    if (not(option.isnumeric())): 
+                        print("ERORR: La opción proporcionada es incorrecta por favor digite uno de los números del menú") 
+                        continue
+                    x = int(option)
+                    if x == 1: 
+                        clearBaths.restoreConfig()
+                        time.sleep(2)
+                        menu.startMenu()
+                    elif x == 2:
+                        print("Volviendo al menú principal")
+                        time.sleep(2)
+                        menu.startMenu()
+            else:
+                print("\nEL ARCHIVO ",File.upper()," NO SE ENCONTRO O NO EXISTE\n\n")
+                #menu.startMenu()
         except BaseException():
             print("----------ERROR DEL SISTEMA----------")
 
