@@ -30,9 +30,9 @@ def startMenu():
 # Ejecuta las opciones copiar
             if x == 1: 
                print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
-               time.sleep(2) 
+               time.sleep(1.5) 
                print("\nElija una opción para continuar con el copiado de archivos\n")
-               print("1. COPIAR ARCHIVOS POR FILTRO DE CONFIGURACIÓN-----")
+               print("1. COPIAR ARCHIVOS POR FILTRO DE CONFIGURACION-----")
                print("2. COPIAR TODOS LOS ARCHIVOS DEL ORIGEN--------\n")
                optCop = input()
                z = int(optCop)
@@ -49,9 +49,9 @@ def startMenu():
 # Ejecuta las opciones mover
             elif x == 2:
                print("\n----------INICIO DE LECTURA DE ARCHIVO MADRE----------\n\n")
-               time.sleep(2)
+               time.sleep(1.5)
                print("\nElija una opción para continuar con el movimiento de archivos\n")
-               print("1. MOVER ARCHIVOS POR FILTRO DE CONFIGURACIÓN-----")
+               print("1. MOVER ARCHIVOS POR FILTRO DE CONFIGURACION-----")
                print("2. MOVER TODOS LOS ARCHIVOS DEL ORIGEN--------\n")
                optMov = input()
                y = int(optMov)

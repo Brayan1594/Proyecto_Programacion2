@@ -4,61 +4,66 @@ from random import randrange
 import File as fl
 #Esta es la clase Bitacora
 class logBook:
+# Crea la bitácora y pone el título
+    def iniLogBook():
+        file = open("Bitacora.txt",'a')
+        file.write("--------------------REGISTRO GENERAL DE EJECUCIONES--------------------\n\n")
+
 #Escribe la hora y fecha actual a la bitacora
     def writeDate():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write(f"fecha: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"+"\r")
+        file.close
 
 #Coloca un id a la bitacora
     def putId():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"ID: {randrange(20)}"+"\r")    
-        archivo.close  
+        file = open("Bitacora.txt",'a')
+        file.write(f"ID: {randrange(20)}"+"\r")    
+        file.close  
 
 #Agrega a la bitacora la ruta del origen de los archivos 
     def sourceCapture():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Origen: {fl.origin}"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write(f"Origen: {fl.origin}"+"\r")
+        file.close
 
 #Agrega a la bitacora la ruta del destino de los archivos
     def sourceDestiny():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Destino: {fl.destiny}"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write(f"Destino: {fl.destiny}"+"\r")
+        file.close
 
 #Agrega una lista a la bitacora sobre los archivos copiados 
     def captureCopyfiles(filesListco):
-         archivo = open("Bitacora.txt",'a')
-         archivo.write(f"Archivos copiados : {filesListco}"+"\r")
-         archivo.write("-----------------------------------------------------------------------------"+"\r")
-         archivo.close
+         file = open("Bitacora.txt",'a')
+         file.write(f"Archivos copiados : {filesListco}"+"\r")
+         file.write("-----------------------------------------------------------------------------"+"\r")
+         file.close
 
 #Agrega una lista a la bitacora sobre los archivos que se movieron 
     def captureMovedfiles(fileListmo):
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Archivos movidos: {fileListmo}"+"\r")
-        archivo.write("------------------------------------------------------------------------------"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write(f"Archivos movidos: {fileListmo}"+"\r")
+        file.write("------------------------------------------------------------------------------"+"\r")
+        file.close
 
 #Agrega el tiempo programado a la bitacora
     def progratime(seconds):
-        archivo = open("Bitacora.txt",'a')
-        archivo.write(f"Tiempo Programado: {seconds} Segundos"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write(f"Tiempo Programado: {seconds} Segundos"+"\r")
+        file.close
 
 #Agrega el titulo del movimiento a la bitacora
     def successMove():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write("MOVIMIENTO REALIZADO CON EXITO"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write("MOVIMIENTO REALIZADO CON EXITO"+"\r")
+        file.close
 
 #Agrega el titulo del copiado a la bitacora
     def successCopy():
-        archivo = open("Bitacora.txt",'a')
-        archivo.write("COPIADO REALIZADO CON EXITO"+"\r")
-        archivo.close
+        file = open("Bitacora.txt",'a')
+        file.write("COPIADO REALIZADO CON EXITO"+"\r")
+        file.close
 
 #Realiza la lectura de la bitacora
     def logReading():

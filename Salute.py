@@ -1,7 +1,7 @@
 # Importe de las clases necesarias
 import menu
 import time
-
+import logBook as lg
 # Presentación del aplicativo
 def startSalute():
     print("\n\n"+"      -------------------------------------BIENVENIDO A LA APP PROYECTO FINAL-------------------------------------"+"\n\n")
@@ -19,6 +19,7 @@ def startSalute():
                 continue
             x = int(Continuar)
             if x == 1:
+                lg.logBook.iniLogBook()
                 menu.startMenu()
                 break
             elif x == 2:
