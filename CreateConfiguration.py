@@ -1,6 +1,6 @@
 # Importe de las clases necesarias
 import os
-
+import menu
 # Clase que crea la configuración del aplicativo
 class createFileConfiguration:
 
@@ -23,6 +23,11 @@ class createFileConfiguration:
         print("\n-----NUEVA CONFIGURACION DEL PROGRAMA-----\n")
         file = open("Pruebas.txt","r")
         list = file.readlines()
+        binacle = open("Bitacora.txt","a")
+        binacle.write("-----INSERCION DE CONFIGURACION NUEVA-----\n")
         for x in list:
             print(x)
+            binacle.write(x)
         file.close()
+        binacle.close()
+        

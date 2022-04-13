@@ -44,7 +44,6 @@ class fileMovement:
         lb.logBook.successMove()
         lb.logBook.progratime(seconds)
         time1.start()
-        menu.showMenu()
 
 # Asigna el tiempo de ejecución del método "movementTime1"
     def runMoveFilter():

@@ -1,8 +1,8 @@
 # Importe de las clases necesarias
 import os
+import Salute
 # Lee el archivo configuración y captura las variables principales
-class Archivo:
-
+class Archivo:  
     def lecturaArchivo():
         global origin
         global destiny
@@ -33,5 +33,3 @@ class Archivo:
         existingFiles = os.listdir(destiny)
         for line in existingFiles:
             print(line)
-
-

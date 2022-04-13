@@ -1,9 +1,5 @@
 # Importe de las clases necesarias
 import os
-from this import d
-from tkinter import Menu
-import File as fl
-import logBook as lb
 from datetime import datetime
 import menu
 import time
@@ -18,7 +14,7 @@ class clearBaths:
             File = open("ConfiguracionProyecto.txt","r")
             List = File.readlines()
             forCopying = open("Bitacora.txt",'a')
-            forCopying.write("\n----------LIMPIEZA DE CONFIGURACION----------\n")
+            forCopying.write("----------LIMPIEZA DE CONFIGURACION----------\n")
             forCopying.write("Fecha y hora del movimiento:   ")
             forCopying.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S')+"\n")
             forCopying.write("Información borrada\n")
@@ -53,6 +49,8 @@ class clearBaths:
                 x = int(option)
                 if x == 1: 
                     clearBaths.restoreConfig()
+                    time.sleep(2)
+                    menu.startMenu()
                 elif x == 2:
                     print("Volviendo al menú principal")
                     time.sleep(2)

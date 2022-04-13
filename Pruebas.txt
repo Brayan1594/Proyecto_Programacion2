@@ -1,0 +1,4 @@
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=txt,xslx
+MoveFiles=docx,pptx

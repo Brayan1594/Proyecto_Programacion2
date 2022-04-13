@@ -29,3 +29,4 @@ def startSalute():
                 print("La opción digitada no es válida, por favor digite una opción presente en el menú: "+"\n")
     except BaseException():
         print("--------------ERROR DEL SISTEMA---------------")
+
