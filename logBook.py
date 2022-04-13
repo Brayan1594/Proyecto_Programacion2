@@ -1,5 +1,6 @@
 # Importe de las clases necesarias
 from datetime import datetime
+from random import randrange
 import File as fl
 class logBook:
     
@@ -10,7 +11,7 @@ class logBook:
 
     def putId():
         archivo = open("Bitacora.txt",'a')
-        archivo.write(f"ID: {1}"+"\r")    
+        archivo.write(f"ID: {randrange(20)}"+"\r")    
         archivo.close  
 
     def sourceCapture():
