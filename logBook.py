@@ -35,18 +35,28 @@ class logBook:
 
 #Agrega una lista a la bitacora sobre los archivos copiados 
     def captureCopyfiles(filesListco):
-         file = open("Bitacora.txt",'a')
-         file.write(f"Archivos copiados : {filesListco}"+"\r")
-         file.write("-----------------------------------------------------------------------------"+"\r")
-         file.close
-
-#Agrega una lista a la bitacora sobre los archivos que se movieron 
-    def captureMovedfiles(fileListmo):
+        n=1
         file = open("Bitacora.txt",'a')
-        file.write(f"Archivos movidos: {fileListmo}"+"\r")
+        file.write("Archivos copiados: "+"\r")
+        for line in filesListco:
+            file.write(f"{n}: {line}"+"\r")
+            n+=1
+        file.write(f"La cantidad de archivos copiados es de: {n-1}"+"\r")
         file.write("------------------------------------------------------------------------------"+"\r")
         file.close
 
+#Agrega una lista a la bitacora sobre los archivos que se movieron 
+    def captureMovedfiles(fileListmo):
+        n=1
+        file = open("Bitacora.txt",'a')
+        file.write("Archivos movidos: "+"\r")
+        for line in fileListmo:
+            file.write(f"{n}: {line}"+"\r")
+            n+=1
+        file.write(f"La cantidad de archivos movidos es de: {n-1}"+"\r")
+        file.write("------------------------------------------------------------------------------"+"\r")
+        file.close
+        
 #Agrega el tiempo programado a la bitacora
     def progratime(seconds):
         file = open("Bitacora.txt",'a')
