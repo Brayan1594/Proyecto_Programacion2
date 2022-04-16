@@ -5,17 +5,17 @@ import ClearConfiguration as CL
 import MovementFiles as MF
 import CopyingFiles as CF
 import logBook as lb
-
+import File as fl
 
 # Muestra el menú
 def showMenu():
     print(""+"------------------------------MENU PRINCIPAL------------------------------"+"\n\n\n")
-    print("-----------------OPCION 1:   COPIAR ARCHIVOS.--------------------------")
-    print("-----------------OPCION 2:   MOVER ARCHIVOS.---------------------------")
-    print("-----------------OPCION 3:   LIMPIAR BATCHS.-----------------------------")
-    print("-----------------OPCION 4:   CONSULTAR BITACORA.-----------------------------")
-    print("-----------------OPCION 5:   SALIR DEL PROGRAMA.--------------------------")
-    print("--------------------------------------------------------------------------\n")
+    print("-----------------OPCION 1:   COPIAR ARCHIVOS.--------------------------------")
+    print("-----------------OPCION 2:   MOVER ARCHIVOS.---------------------------------")
+    print("-----------------OPCION 3:   LIMPIAR BATCHS.----------------------------------")
+    print("-----------------OPCION 4:   CONSULTAR BITACORA.-------------------------------")
+    print("-----------------OPCION 5:   SALIR DEL PROGRAMA.-------------------------------")
+    print("-----------------OPCION 6:---CREAR NUEVA CONFIGURACION------------------------\n")
 
 #Crea el menú principal
 def startMenu():
@@ -67,7 +67,9 @@ def startMenu():
                    startMenu()
 # Ejecuta opción de borrar baths
             elif x == 3:
-                CL.clearBaths.clearConfig()
+                fl.Archivo.lecturaArchivo()
+                os.remove("ConfiguracionProyecto.txt")
+                #CL.clearBaths.clearConfig()
 # Ejecuta ioción de consultar bitácora
             elif x == 4:
                 if os.path.exists('Bitacora.txt'):
@@ -79,6 +81,12 @@ def startMenu():
                 print("GRACIAS POR UTILIZAR LA APP")
                 time.sleep(2)
                 exit()
+                
+            elif x == 6:
+                if os.path.exists("ConfiguracionProyecto.txt"):
+                    print("Ya existe un archivo configurado")
+                else:  
+                    fl.Archivo.newConfiguration()
             else:
                 print("ERORR: La opción digitada no es válida, por favor digite una opción presente en el menú")
     except BaseException():

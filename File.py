@@ -1,6 +1,6 @@
 # Importe de las clases necesarias
 import os
-import Salute
+import menu as mn
 # Lee el archivo configuración y captura las variables principales
 class Archivo:  
     def lecturaArchivo():
@@ -20,6 +20,18 @@ class Archivo:
             elif(x.split("=")[0].strip() == "MoveFiles"):
                 moveFiles = x.split("=")[1].strip()         
                 File.close()
+#Crea la nueva configuracion 
+    def newConfiguration():
+        newArch = open("ConfiguracionProyecto.txt",'a')
+        newArch.write(f"Origin={origin}"+"\r")
+        newArch.write(f"Destiny={destiny}"+"\r")
+        print("Word=docx  Exel=xlsx  Powerpoint=pptx  Archivo=txt  Imagenes=PNG\n")
+        newCopyfiles =input("Introduzca las extensiones para el filtro de copiado separadas de una coma: \n")
+        newArch.write(f"CopyFiles={newCopyfiles}"+"\r")
+        print("Word=docx  Exel=xlsx  Powerpoint=pptx  Archivo=txt  Imagenes=PNG\n")
+        newmoveFiles=input("Introduzca las extensiones para el filtro de movimiento separadas de una coma: \n")
+        newArch.write(f"MoveFiles={newmoveFiles}")
+        mn.showMenu()
 # Muestra los archivos de la carpeta origen    
     def showOrigin():
         print("Los datos en el archivo de configuración son")
