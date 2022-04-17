@@ -1,6 +1,7 @@
 # Importe de las clases necesarias
 from datetime import datetime
 from random import randrange
+import os
 import File as fl
 #Esta es la clase Bitacora
 class logBook:
@@ -18,19 +19,21 @@ class logBook:
 #Coloca un id a la bitacora
     def putId():
         file = open("Bitacora.txt",'a')
-        file.write(f"ID: {randrange(20)}"+"\r")    
+        file.write(f"ID: {randrange(100)}"+"\r")    
         file.close  
 
 #Agrega a la bitacora la ruta del origen de los archivos 
     def sourceCapture():
         file = open("Bitacora.txt",'a')
-        file.write(f"Origen: {fl.origin}"+"\r")
+        originName=os.path.basename(fl.origin)
+        file.write(f"Nombre de la Carpeta Origen: {originName}"+"\r")
         file.close
 
 #Agrega a la bitacora la ruta del destino de los archivos
     def sourceDestiny():
         file = open("Bitacora.txt",'a')
-        file.write(f"Destino: {fl.destiny}"+"\r")
+        destinyName=os.path.basename(fl.destiny)
+        file.write(f"Nombre de la carpeta Destino: {destinyName}"+"\r")
         file.close
 
 #Agrega una lista a la bitacora sobre los archivos copiados 
