@@ -2,7 +2,9 @@
 from datetime import datetime
 from random import randrange
 import os
+import time
 import File as fl
+import menu as mn
 #Esta es la clase Bitacora
 class logBook:
 # Crea la bitácora y pone el título
@@ -85,6 +87,8 @@ class logBook:
         for x in lisLog:
             print(x)
         log.close
+        time.sleep(5)
+        mn.showMenu()
         
 #Realiza los llamados de varios metodos de la bitacora para que se ejecuten en orden
     def writeLogbook():
