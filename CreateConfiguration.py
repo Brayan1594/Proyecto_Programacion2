@@ -11,7 +11,7 @@ class createFileConfiguration:
         copyFiles = input("\nIntroducca las extenciones que desea copiar: ")
         moveFiles = input("Introducca las extenciones que desea mover: ")
 # Crea y escribe el archivo de configuración
-        file = open("Pruebas.txt","a")
+        file = open("ConfiguracionProyecto.txt","a")
         file.write("Origin="+origin)
         file.write("\nDestiny="+destiny)
         file.write("\nCopyFiles="+copyFiles)
@@ -21,13 +21,14 @@ class createFileConfiguration:
 # Lee el archivo de configuración
     def readFile1():
         print("\n-----NUEVA CONFIGURACION DEL PROGRAMA-----\n")
-        file = open("Pruebas.txt","r")
+        file = open("ConfiguracionProyecto.txt","r")
         list = file.readlines()
         binacle = open("Bitacora.txt","a")
-        binacle.write("-----INSERCION DE CONFIGURACION NUEVA-----\n")
+        binacle.write("\n-----INSERCION DE CONFIGURACION NUEVA-----\n")
         for x in list:
             print(x)
             binacle.write(x)
+        binacle.write("\n------------------------------------------------------------------------------"+"\r")
         file.close()
         binacle.close()
         

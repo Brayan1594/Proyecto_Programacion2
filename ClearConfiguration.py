@@ -20,6 +20,7 @@ class clearBaths:
             forCopying.write("Información borrada\n")
             for x in List:
                 forCopying.write(x)
+            forCopying.write("\n------------------------------------------------------------------------------"+"\r")
             forCopying.close()
         except BaseException():
             print("----------ERROR DEL SISTEMA----------")
@@ -34,11 +35,11 @@ class clearBaths:
 
 # Realiza el borrado de batchs
     def clearConfig():
-        File = ("Pruebas.txt")
+        File = ("ConfiguracionProyecto.txt")
         clearBaths.backupConfig()
         try:
             if os.path.exists(File):
-                os.remove("Pruebas.txt")
+                os.remove("ConfiguracionProyecto.txt")
                 print("LIMPIEZA DE BATCHS EXITOSA\n")
                 print("Por favor elija una opción para continuar\n")
                 print("1. Restablecer una configuración----")

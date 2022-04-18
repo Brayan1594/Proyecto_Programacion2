@@ -1,0 +1,16 @@
+--------------------REGISTRO GENERAL DE EJECUCIONES--------------------
+
+COPIADO REALIZADO CON EXITOTiempo Programado: 2 SegundosID: 19fecha: 2022-04-18 15:28:39Nombre de la Carpeta Origen: OrigenNombre de la carpeta Destino: DestinoArchivos copiados: 1: Archivo plano1.txt2: Archivo plano2.txt3: Archivo plano3.txt4: Documento word1.docx5: Documento word2.docx6: Documento word3.docxLa cantidad de archivos copiados es de: 6------------------------------------------------------------------------------MOVIMIENTO REALIZADO CON EXITOTiempo Programado: 2 SegundosID: 40fecha: 2022-04-18 15:28:47Nombre de la Carpeta Origen: OrigenNombre de la carpeta Destino: DestinoArchivos movidos: 1: Hoja de calculo1.xlsx2: Hoja de calculo2.xlsx3: Hoja de calculo3.xlsx4: Power Point1.pptx5: Power Point2.pptx6: Power Point3.pptxLa cantidad de archivos movidos es de: 6----------------------------------------------------------------------------------------LIMPIEZA DE CONFIGURACION----------
+Fecha y hora del movimiento:   2022-04-18 15:28:52
+Información borrada
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=txt,docx
+MoveFiles=xlsx,pptx
+------------------------------------------------------------------------------
+-----INSERCION DE CONFIGURACION NUEVA-----
+Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
+Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
+CopyFiles=docx,pptx
+MoveFiles=xlsx,txt
+------------------------------------------------------------------------------
