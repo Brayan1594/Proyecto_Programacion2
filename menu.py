@@ -9,7 +9,7 @@ import File as fl
 
 # Muestra el menú
 def showMenu():
-    print(""+"------------------------------MENU PRINCIPAL------------------------------"+"\n\n\n")
+    print("\n------------------------------MENU PRINCIPAL------------------------------"+"\n\n")
     print("-----------------OPCION 1:   COPIAR ARCHIVOS.--------------------------------")
     print("-----------------OPCION 2:   MOVER ARCHIVOS.---------------------------------")
     print("-----------------OPCION 3:   LIMPIAR BATCHS.----------------------------------")
