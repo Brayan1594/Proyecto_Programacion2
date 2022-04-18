@@ -37,7 +37,7 @@ class clearBaths:
         File = ("Pruebas.txt")
         clearBaths.backupConfig()
         try:
-            if File == True:
+            if os.path.exists(File):
                 os.remove("Pruebas.txt")
                 print("LIMPIEZA DE BATCHS EXITOSA\n")
                 print("Por favor elija una opción para continuar\n")

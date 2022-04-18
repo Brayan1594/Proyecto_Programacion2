@@ -68,8 +68,8 @@ def startMenu():
 # Ejecuta opción de borrar baths
             elif x == 3:
                 fl.Archivo.lecturaArchivo()
-                os.remove("ConfiguracionProyecto.txt")
-                #CL.clearBaths.clearConfig()
+                #os.remove("ConfiguracionProyecto.txt")
+                CL.clearBaths.clearConfig()
 # Ejecuta ioción de consultar bitácora
             elif x == 4:
                 if os.path.exists('Bitacora.txt'):
