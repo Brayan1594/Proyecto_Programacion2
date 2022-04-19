@@ -1,7 +1,7 @@
 # Importe de las clases necesarias
 import time
 import os
-import ClearConfiguration as CL
+import ClearConfiguration as CL 
 import MovementFiles as MF
 import CopyingFiles as CF
 import logBook as lb
@@ -15,8 +15,7 @@ def showMenu():
     print("-----------------OPCION 3:   LIMPIAR BATCHS.----------------------------------")
     print("-----------------OPCION 4:   CONSULTAR BITACORA.-------------------------------")
     print("-----------------OPCION 5:   SALIR DEL PROGRAMA.-------------------------------")
-    print("-----------------OPCION 6:---CREAR NUEVA CONFIGURACION------------------------\n")
-
+    
 #Crea el menú principal
 def startMenu():
     showMenu()
@@ -68,7 +67,6 @@ def startMenu():
 # Ejecuta opción de borrar baths
             elif x == 3:
                 fl.Archivo.lecturaArchivo()
-                #os.remove("ConfiguracionProyecto.txt")
                 CL.clearBaths.clearConfig()
 # Ejecuta ioción de consultar bitácora
             elif x == 4:
@@ -81,12 +79,7 @@ def startMenu():
                 print("GRACIAS POR UTILIZAR LA APP")
                 time.sleep(2)
                 exit()
-                
-            elif x == 6:
-                if os.path.exists("ConfiguracionProyecto.txt"):
-                    print("Ya existe un archivo configurado")
-                else:  
-                    fl.Archivo.newConfiguration()
+# Ejecuta la salida del menu
             else:
                 print("ERORR: La opción digitada no es válida, por favor digite una opción presente en el menú")
     except BaseException():

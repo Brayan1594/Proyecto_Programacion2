@@ -1,4 +1,4 @@
-Origin=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Origen
-Destiny=C:\Users\LUIS\Documents\Python\Proyecto_Programacion2\Destino
-CopyFiles=txt,docx
-MoveFiles=xlsx,pptx
+Origin=C:\Users\LUIS\Desktop\Origen
+Destiny=C:\Users\LUIS\Desktop\Destino
+CopyFiles=pptx,docx
+MoveFiles=xlsx,txt
