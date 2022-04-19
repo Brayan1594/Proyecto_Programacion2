@@ -9,9 +9,12 @@ import menu as mn
 class logBook:
 # Crea la bitácora y pone el título
     def iniLogBook():
-        file = open("Bitacora.txt",'a')
-        file.write("--------------------REGISTRO GENERAL DE EJECUCIONES--------------------\n\n")
-
+        if os.path.exists("Bitacora.txt"):
+            pass
+        else:
+            file = open("Bitacora.txt",'a')
+            file.write("--------------------REGISTRO GENERAL DE EJECUCIONES--------------------\n\n")
+        
 #Escribe la hora y fecha actual a la bitacora
     def writeDate():
         file = open("Bitacora.txt",'a')
